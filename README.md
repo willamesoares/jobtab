@@ -1,4 +1,4 @@
-# JobTabe
+# JobTab
 > Get the latest offers for jobs in your area
 
 ## Features
