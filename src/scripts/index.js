@@ -16,7 +16,7 @@ const render = () => {
 
   ReactDOM.render(
     <App state={state} actions={actions}/>,
-    document.getElementById('clock')
+    document.getElementById('root')
   )
 }
 
