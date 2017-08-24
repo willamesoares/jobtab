@@ -1,9 +1,5 @@
 @import '~normalize.css';
 
-html{
-
-}
-
 .general{
   color: #263238;
   min-height: 100vh !important;
@@ -52,11 +48,13 @@ html{
 
 .clock__hours{
   font-weight: 200;
+  margin-left: .2em;
 }
 
 .clock--format{
   vertical-align: 1.7em;
   font-size:0.3em;
+  text-transform: uppercase;
 }
 
 .share-extension{
