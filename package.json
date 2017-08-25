@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "license": "MIT",
   "devDependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
