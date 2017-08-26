@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 import { updateTime } from '../actions/hours'
+import { updateDailyQuote } from '../actions/daily-quote'
 
 import SearchForm from './SearchForm'
 import Clock from '../components/Clock'
+import DailyQuote from '../components/DailyQuote'
 
 class App extends Component {
   render () {
@@ -12,18 +14,7 @@ class App extends Component {
       <div className="row general">
         <div className="column-left col s12 m6 l8 grey lighten-3">
           <div className="row">
-            <div className="quote-area col s12 l8 m11 offset-l2 center">
-              <div className="quote-area__tag center">#Daily Quote</div>
-              <div className="quote-area__dayquote">
-                <i className="fa fa-quote-left cyan-text text-darken-1" aria-hidden="true"></i>
-                <span className="quote-area__dayquote-text"> You are the only person with your exact blend of talents and skills.</span>
-              </div>
-              <div className="quote-area__twitter-button center">
-                <a href="">
-                  <i className="fa fa-twitter cyan-text text-darken-1" aria-hidden="true"></i>
-                </a>
-              </div>
-            </div>
+            <DailyQuote updateDailyQuoteHandler={this.props.updateDailyQuote} />
           </div>
 
           <Clock
@@ -77,5 +68,8 @@ class App extends Component {
 
 export default connect(
   (state) => state,
-  { updateTime }
+  {
+    updateTime,
+    updateDailyQuote
+  }
 )(App)
