@@ -4,3 +4,9 @@ export const addOffer = (offer) => {
     offer
   }
 }
+
+export const clearOfferList = () => {
+  return {
+    type: 'CLEAR_OFFER_LIST'
+  }
+}

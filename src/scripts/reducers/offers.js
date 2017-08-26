@@ -1,12 +1,3 @@
-const initialState = [
-  {
-    id: 1,
-    company: 'toptal',
-    job: 'web developer',
-    date: 'jul, 26'
-  }
-]
-
 export const offers = (state = [], action) => {
   switch (action.type) {
   case 'ADD_OFFER':
@@ -14,6 +5,8 @@ export const offers = (state = [], action) => {
       ...state,
       action.offer
     ]
+  case 'CLEAR_OFFER_LIST':
+    return []
   default:
     return state
   }
