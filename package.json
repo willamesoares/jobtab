@@ -5,6 +5,7 @@
   "main": "src/app.js",
   "license": "MIT",
   "devDependencies": {
+    "axios": "^0.16.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-loader": "^7.1.1",
@@ -17,6 +18,7 @@
     "extract-text-webpack-plugin": "2.1.2",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "throttle-debounce": "^1.0.1",
     "webpack": "^3.3.0",
     "webpack-dev-server": "^2.6.1"
   },

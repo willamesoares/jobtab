@@ -89,7 +89,7 @@
 .search-input{
   font-size:0.94em;
   font-weight:200;
-  color: rgba(255,255,255,0.5);
+  color: rgb(255,255,255);
   border-radius: 5px !important;
   border: 1px solid rgba(255,255,255,0.5) !important;
   height:2em !important;
@@ -100,8 +100,9 @@
 
 input.icon {
   padding:5px;
-  color: rgba(255,255,255,0.5);
+  color: rgb(255,255,255);
 }
+
 input.icon::-webkit-input-placeholder {
   font-family:'FontAwesome';
   color: rgba(255,255,255,0.5);
@@ -143,7 +144,13 @@ input.icon::-ms-input-placeholder {
   color: #eee;
 }
 
+.jobs-item-container {
+  overflow-y: scroll;
+  max-height: 29rem;
+}
+
 .jobs-item{
+  color: #fff;
   font-size:0.94em;
   padding: 10px !important;
   margin: 0 !important;
@@ -168,17 +175,6 @@ input.icon::-ms-input-placeholder {
 
 .jobs-item__date{
   display: inline;
-}
-
-.jobs-more{
-  font-size: 0.75em;
-  color: rgba(238, 238, 238, 0.5);
-  margin-top: 20px;
-}
-
-.jobs-more a{
-  color: rgba(238, 238, 238, 0.5);
-  text-decoration: none;
 }
 
 .align-vertical{
