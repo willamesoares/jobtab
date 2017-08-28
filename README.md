@@ -7,7 +7,7 @@
 
 ```bash
 # clone it
-$ git clone https://github.com/marcosjr182/chingu-extension.git
+$ git clone https://github.com/willamesoares/jobtab.git
 
 # install dependencies using yarn
 $ yarn install
