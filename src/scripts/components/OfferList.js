@@ -25,7 +25,7 @@ class OfferList extends Component {
           <OfferListHeader />
 
           <div className="jobs-item-container">
-            {this.props.offers.map(offer => <OfferItem key={offer.id} {...offer}/>)}
+            {this.props.filter.map(offer => <OfferItem key={offer.id} {...offer}/>)}
           </div>
         </div>
       )
@@ -43,9 +43,5 @@ class OfferList extends Component {
 }
 
 export default connect(
-  (state) => ({
-    offers: state.offers,
-    searchBar: state.searchBar,
-    offerList: state.offerList
-  })
+  (state) => (state)
 )(OfferList)
