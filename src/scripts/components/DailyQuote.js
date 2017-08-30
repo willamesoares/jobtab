@@ -20,13 +20,15 @@ class DailyQuote extends Component {
   }
 
   render () {
+    const twitterIntentURL = `https://twitter.com/share?url=https://github.com/willamesoares/jobtab&hashtags=jobtab%2Cdailyquote&text=${this.props.dailyQuote.quote}`
+
     return (
       <div className="quote-area col s12 l8 m11 offset-l2 center">
         <div
           className="quote-area__tag center"
           data-themeable={this.props.theme}>
           #Daily Quote
-          </div>
+        </div>
         <div className="quote-area__dayquote">
           <i
             className="fa fa-quote-left"
@@ -38,11 +40,15 @@ class DailyQuote extends Component {
           <strong><small>{this.props.dailyQuote.author}</small></strong>
         </div>
         <div className="quote-area__twitter-button center">
-          <i
-            className="fa fa-twitter"
-            data-themeable={this.props.theme} 
-            aria-hidden="true">
-          </i>
+          <a
+            href={twitterIntentURL}
+            target="_blank">
+            <i
+              className="fa fa-twitter"
+              data-themeable={this.props.theme}
+              aria-hidden="true">
+            </i>
+          </a>
         </div>
       </div>
     )
