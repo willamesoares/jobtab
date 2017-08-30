@@ -8,6 +8,7 @@ import SearchForm from './SearchForm'
 import Clock from '../components/Clock'
 import DailyQuote from '../components/DailyQuote'
 import ThemePicker from '../components/ThemePicker'
+import ShareExtensionButton from '../components/ShareExtensionButton'
 
 class App extends Component {
   render () {
@@ -22,14 +23,7 @@ class App extends Component {
             hours={this.props.clock.hours}
             updateTimeHandler={this.props.updateTime}/>
 
-          <div className="share-extension center">
-            <div className="share-extension__button">
-              <a href="#">
-                <img src="https://raw.githubusercontent.com/diemano/chingu-extension/master/src/turtle.png" />
-              </a>
-            </div>
-            <div className="share-extension__label">share this extension</div>
-          </div>
+          <ShareExtensionButton />
         </div>
         <div className="column-right col s12 m6 l4 grey-text text-lighten-3 blue-grey darken-4">
           <div className="logo center">TabJob</div>
