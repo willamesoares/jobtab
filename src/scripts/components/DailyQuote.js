@@ -20,7 +20,7 @@ class DailyQuote extends Component {
   }
 
   render () {
-    const twitterIntentURL = `https://twitter.com/share?url=https://github.com/willamesoares/jobtab&hashtags=jobtab%2Cdailyquote&text=${this.props.dailyQuote.quote}`
+    const twitterIntentURL = `https://twitter.com/share?url=https://chrome.google.com/webstore/detail/jobtab/pamlioaljgkpkgnmbedlbekgnoodgeeo&hashtags=jobtab%2Cdailyquote&text=${this.props.dailyQuote.quote}`
 
     return (
       <div className="quote-area col s12 l8 m11 offset-l2 center">
