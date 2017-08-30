@@ -1,11 +1,24 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import { setTheme } from '../actions/theme'
 
 class ThemePicker extends Component {
-  onThemePickerClick (e) {
-    const theme = $(e.target).data('theme')
+  componentDidMount () {
     const themeableItems = $('[data-themeable]')
 
-    themeableItems.attr('data-themeable', theme)
+    chrome.storage.sync.get(['theme'], (items) => {
+      if (items.theme) {
+        this.props.setTheme(items.theme)
+      }
+    })
+  }
+
+  onThemePickerClick (e) {
+    const theme = $(e.target).data('theme')
+    this.props.setTheme(theme)
+
+    chrome.storage.sync.set({theme})
   }
 
   render () {
@@ -39,4 +52,7 @@ class ThemePicker extends Component {
   }
 }
 
-export default ThemePicker
+export default connect(
+  (state) => state,
+  { setTheme }
+)(ThemePicker)

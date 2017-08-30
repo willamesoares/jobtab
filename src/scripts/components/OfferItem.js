@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class OfferItem extends Component {
   render () {
@@ -7,7 +8,7 @@ class OfferItem extends Component {
         <ul key={this.props.id} id="nav-jobs" className="jobs-item row">
           <li
             className="jobs-item__company col s3 l2 center"
-            data-themeable="first">
+            data-themeable={this.props.theme}>
             {this.props.company}
           </li>
           <li className="jobs-item__job col s6 l7">{this.props.job}</li>
@@ -18,4 +19,6 @@ class OfferItem extends Component {
   }
 }
 
-export default OfferItem
+export default connect(
+  (state) => state
+)(OfferItem)

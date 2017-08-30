@@ -36,7 +36,7 @@ class SearchFilter extends Component {
       <div
         className="filter center"
         data-filter
-        data-themeable="first">
+        data-themeable={this.props.theme}>
         Filter by:
         <a
           href=""

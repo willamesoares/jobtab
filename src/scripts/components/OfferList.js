@@ -25,7 +25,7 @@ class OfferList extends Component {
         <div className="jobs">
           <OfferListHeader />
 
-          <div className="jobs-item-container" data-themeable="first">
+          <div className="jobs-item-container" data-themeable={this.props.theme}>
             {this.props.filter.map(offer => <OfferItem key={offer.id} {...offer}/>)}
           </div>
         </div>

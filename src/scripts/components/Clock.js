@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class Clock extends Component {
   constructor (props) {
@@ -40,7 +41,7 @@ class Clock extends Component {
     return (
       <div className="clock center">
         <div className="clock__time">
-          <i className="fa fa-clock-o" data-themeable="first" aria-hidden="true"></i>
+          <i className="fa fa-clock-o" data-themeable={this.props.theme} aria-hidden="true"></i>
           <span className="clock__hours">
             {`${convertedHours}:${minutes}`}
             <span className="clock--format">
@@ -53,4 +54,6 @@ class Clock extends Component {
   }
 }
 
-export default Clock
+export default connect(
+  (state) => state
+)(Clock)
