@@ -174,7 +174,9 @@ input.icon::-ms-input-placeholder {
 }
 
 .jobs-item{
+  align-items: center;
   color: #fff;
+  display: flex;
   font-size:0.94em;
   padding: 10px !important;
   margin: 0 !important;

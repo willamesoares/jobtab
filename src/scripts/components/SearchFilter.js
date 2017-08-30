@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 
 import { filterOffers, removeFilter } from '../actions/filter-offers'
 
-import {  } from '../actions/filter-offers'
-
 class SearchFilter extends Component {
   constructor (props) {
     super(props)
