@@ -1,7 +1,13 @@
 # JobTab
-> Get the latest offers for jobs in your area
+> Get the latest offers for jobs based on your area of interest
+
+![print-job-tab](http://www.clipular.com/c/5578693849382912.png?k=NWnTTRtFnBWV29k6CG92DSareDA)
 
 ## Features
+ - Daily quote
+ - Clock
+ - Themeable
+ - Filter results by current day, week, or month
 
 ## Installation
 
@@ -40,3 +46,7 @@ $ npm build
 ## LICENSE
 
 [MIT](LICENSE)
+
+### Developed by Turtle Team 28 in Chingu Cohort
+ - [Will Soares](https://github.com/willamesoares)
+ - [Diemano Nóbrega](https://github.com/diemano)
