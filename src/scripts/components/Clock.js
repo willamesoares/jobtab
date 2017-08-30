@@ -40,7 +40,7 @@ class Clock extends Component {
     return (
       <div className="clock center">
         <div className="clock__time">
-          <i className="fa fa-clock-o cyan-text text-darken-1" aria-hidden="true"></i>
+          <i className="fa fa-clock-o" data-themeable="first" aria-hidden="true"></i>
           <span className="clock__hours">
             {`${convertedHours}:${minutes}`}
             <span className="clock--format">

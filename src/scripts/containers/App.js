@@ -7,6 +7,7 @@ import { updateDailyQuote } from '../actions/daily-quote'
 import SearchForm from './SearchForm'
 import Clock from '../components/Clock'
 import DailyQuote from '../components/DailyQuote'
+import ThemePicker from '../components/ThemePicker'
 
 class App extends Component {
   render () {
@@ -35,30 +36,13 @@ class App extends Component {
 
           <SearchForm />
 
-          <div className="page-theme center">
-            <ul className="page-theme__items">
-              <li className="page-theme__item">
-                <i className="fa fa-paint-brush" aria-hidden="true"></i>
-              </li>
-              <li className="page-theme__item">
-                <a href="#">
-                  <img src="https://raw.githubusercontent.com/diemano/chingu-extension/master/src/theme-1-blue.png" />
-                </a>
-              </li>
-              <li className="page-theme__item">
-                <a href="#">
-                  <img src="https://raw.githubusercontent.com/diemano/chingu-extension/master/src/theme-2-yellow.png" />
-                </a>
-              </li>
-              <li className="page-theme__item">
-                <a href="#">
-                  <img src="https://raw.githubusercontent.com/diemano/chingu-extension/master/src/theme-3-red.png" />
-                </a>
-              </li>
-            </ul>
-          </div>
+          <ThemePicker />
+
           <footer className="footer center">
-              developed by <a href="#"> Turtle Team 28</a>
+            developed by
+            <a href="https://github.com/willamesoares/jobtab" target="_blank">
+              Turtle Team 28
+            </a>
           </footer>
         </div>
       </div>
