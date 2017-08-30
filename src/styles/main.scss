@@ -124,6 +124,12 @@ input.icon::-ms-input-placeholder {
 .filter-link{
   text-decoration: none;
   color: #eeeeee;
+  margin: 0 .5rem;
+  font-weight: bold;
+
+  &.active {
+    color: #00acc1;
+  }
 }
 
 .jobs{
@@ -145,7 +151,7 @@ input.icon::-ms-input-placeholder {
 }
 
 .jobs-item-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   max-height: 29rem;
 }
 
