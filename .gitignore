@@ -1,6 +1,3 @@
-# Build output folders
-dist/assets/
-
 # Logs
 logs
 *.log
