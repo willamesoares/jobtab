@@ -1,5 +1,9 @@
 @import '~normalize.css';
 
+body {
+  font-size: 1rem;
+}
+
 .general{
   color: #263238;
   min-height: 100vh !important;
@@ -23,11 +27,24 @@
 }
 
 .quote-area__tag{
-  border: 2px solid #00acc1;
+  border: 2px solid;
+  color: black !important;
   padding: 5px;
   width: 125px;
   font-weight: 300;
   font-size: 16px;
+
+  &[data-themeable="first"] {
+    border-color: #00acc1;
+  }
+
+  &[data-themeable="second"] {
+    border-color: #ffde7d;
+  }
+
+  &[data-themeable="third"] {
+    border-color: #ea5455;
+  }
 }
 
 .quote-area__dayquote{
@@ -133,10 +150,11 @@ input.icon::-ms-input-placeholder {
 }
 
 .jobs{
-  margin-top: 0px;
+  margin-top: 1.5rem;
 }
 
 .jobs-header{
+  margin-bottom: 0 !important;
   text-transform: uppercase;
   font-size:0.8em;
 }
@@ -156,10 +174,19 @@ input.icon::-ms-input-placeholder {
 }
 
 .jobs-item{
+  align-items: center;
   color: #fff;
+  display: flex;
   font-size:0.94em;
   padding: 10px !important;
   margin: 0 !important;
+}
+
+.jobs-message-container {
+  font-size: 1.2rem;
+  height: 8rem;
+  padding: 3rem 0;
+  text-align: center;
 }
 
 .jobs-item:hover{
@@ -169,10 +196,26 @@ input.icon::-ms-input-placeholder {
 .jobs-item__company{
   display: inline;
   font-size: 0.57em;
+  font-weight: bold;
   color: #00acc1;
   border: 1px solid #00acc1;
   padding: 2px !important;
   text-transform: uppercase;
+
+  &[data-themeable="first"] {
+    border-color: #00acc1;
+    color: #00acc1;
+  }
+
+  &[data-themeable="second"] {
+    border-color: #ffde7d;
+    color: #ffde7d;
+  }
+
+  &[data-themeable="third"] {
+    border-color: #ea5455;
+    color: #ea5455;
+  }
 }
 
 .jobs-item__job{
@@ -195,9 +238,56 @@ input.icon::-ms-input-placeholder {
 
 .page-theme__item{
   display: inline;
+  margin: 0 .2rem;
+
+  &:not(:first-child) {
+    cursor: pointer;
+  }
 }
 
-.page-theme__items{
+.spinner {
+  display: flex;
+  justify-content: center;
+
+  div {
+    border-radius: 50%;
+    height: .8rem;
+    margin: 0 .5rem;
+    width: .8rem;
+
+    &:first-child {
+      background-color: #00acc1;
+      animation: up-and-down .5s ease-in-out -.1s infinite alternate;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffde7d;
+      animation: up-and-down .5s ease-in-out -.3s infinite alternate;
+    }
+
+    &:nth-child(3) {
+      background-color: #ea5455;
+      animation: up-and-down .5s ease-in-out -.5s infinite alternate;
+    }
+  }
+}
+
+[data-themeable="first"] {
+  &.fa, .active {
+    color: #00acc1;
+  }
+}
+
+[data-themeable="second"] {
+  &.fa, .active {
+    color: #ffde7d;
+  }
+}
+
+[data-themeable="third"] {
+  &.fa, .active {
+    color: #ea5455;
+  }
 }
 
 .footer{
@@ -211,4 +301,13 @@ input.icon::-ms-input-placeholder {
   color: rgba(238, 238, 238, 0.5);
   text-decoration: none;
   font-weight: 500;
+}
+
+@keyframes up-and-down {
+  0% {
+   transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
 }

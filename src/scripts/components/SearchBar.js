@@ -88,6 +88,10 @@ class SearchBar extends Component {
     this.props.removeFilter(this.props.offers)
   }
 
+  setFilterClass () {
+    $('[data-filter]').find('.filter-link').removeClass('active')
+  }
+
   fetchJobs (keyword) {
     const baseURL = 'https://authenticjobs.com/api/'
     const apiKey = '90fa61a37a29b5bd2b3aa145931556b6'
@@ -107,6 +111,7 @@ class SearchBar extends Component {
         .catch(this.onFetchJobsFailure.bind(this))
         .then(this.props.clearOfferListHandler())
         .then(this.removeFilters.bind(this))
+        .then(this.setFilterClass.bind(this))
     }
   }
 

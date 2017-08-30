@@ -5,6 +5,7 @@ import { searchBar } from './search-bar'
 import { offerList } from './offer-list'
 import { dailyQuote } from './daily-quote'
 import { filter } from './filter'
+import { theme } from './theme'
 
 const reducer = combineReducers({
   clock,
@@ -12,7 +13,8 @@ const reducer = combineReducers({
   searchBar,
   offerList,
   dailyQuote,
-  filter
+  filter,
+  theme
 })
 
 export default reducer

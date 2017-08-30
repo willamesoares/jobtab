@@ -8,6 +8,7 @@
   "manifest_version": 2,
   "content_security_policy": "script-src 'self' 'unsafe-eval' https://use.fontawesome.com https://cdnjs.cloudflare.com https://ajax.googleapis.com; object-src 'self'",
   "permissions": [
+    "storage",
     "https://authenticjobs.com/api/",
     "http://quotesondesign.com/wp-json/posts"
   ]

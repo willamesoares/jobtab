@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-import { filterOffers } from '../actions/filter-offers'
-import { removeFilter } from '../actions/filter-offers'
+import { filterOffers, removeFilter } from '../actions/filter-offers'
 
 class SearchFilter extends Component {
   constructor (props) {
     super(props)
 
     this.onFilterClick = this.onFilterClick.bind(this)
+  }
+
+  setFilterClass ($filterLinks, $filterTag) {
+    $filterLinks.removeClass('active')
+    $filterTag.addClass('active')
   }
 
   onFilterClick (e) {
@@ -18,9 +22,7 @@ class SearchFilter extends Component {
     const { offers } = this.props
 
     e.preventDefault()
-
-    $filterLinks.removeClass('active')
-    $filterTag.addClass('active')
+    this.setFilterClass($filterLinks, $filterTag)
 
     if (tag === 'all') {
       return this.props.removeFilter(this.props.offers)
@@ -31,13 +33,16 @@ class SearchFilter extends Component {
 
   render () {
     return (
-      <div className="filter center">Filter by:
+      <div
+        className="filter center"
+        data-filter
+        data-themeable={this.props.theme}>
+        Filter by:
         <a
           href=""
           className="filter-link"
           data-tag="today"
           onClick={this.onFilterClick}>
-
           today
         </a> |
 
@@ -46,7 +51,6 @@ class SearchFilter extends Component {
           className="filter-link"
           data-tag="week"
           onClick={this.onFilterClick}>
-
           this week
         </a> |
 
@@ -55,7 +59,6 @@ class SearchFilter extends Component {
           className="filter-link"
           data-tag="month"
           onClick={this.onFilterClick}>
-
           this month
         </a> |
 
@@ -64,7 +67,6 @@ class SearchFilter extends Component {
           className="filter-link"
           data-tag="all"
           onClick={this.onFilterClick}>
-
           all
         </a>
       </div>
@@ -74,5 +76,8 @@ class SearchFilter extends Component {
 
 export default connect(
   (state) => state,
-  { filterOffers, removeFilter }
+  {
+    filterOffers,
+    removeFilter
+  }
 )(SearchFilter)
