@@ -26,7 +26,7 @@ class App extends Component {
           <ShareExtensionButton />
         </div>
         <div className="column-right col s12 m6 l4 grey-text text-lighten-3 blue-grey darken-4">
-          <div className="logo center">TabJob</div>
+          <div className="logo center">jobtab</div>
 
           <SearchForm />
 
